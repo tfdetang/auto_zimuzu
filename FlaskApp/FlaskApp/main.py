@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/<tvId>/<downloadType>/feeds')
 def get_url(tvId, downloadType):
-    base_url = 'http://diaodiaode.me/rss/feed/'
+    base_url = 'http://rss.rrys.tv/rss/feed/'
     feeds = feedparser.parse(base_url+str(tvId))
     title = feeds['feed']['title']
     items = []
